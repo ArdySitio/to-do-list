@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" >
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <title>List To Do</title>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="./index.html" style="text-decoration: none;">
+                Home
+                </a>        
+            </li>
+            <li><a href="./about.html" style="text-decoration: none;">
+                About
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <img src="logohacktiv8.png" alt="ini logo" class="center">
+
+    <form action="to-do-list.html" method="GET" name="form" onsubmit="return check()">
+            <h1>Welcome to Apps To Do List!</h1>
+        <div class="masuk">
+            <p class="text-login">Please Login</p>
+            <label for="username" >
+                <strong>Username</strong>
+            </label><br/>
+            <input type="text" autocomplete="off" name="username" id="username" class="form-login" ><br/>
+            <div id="user_error">Please fill up your Username</div>
+            <label for="pass" >
+                <strong>Password</strong>
+            </label><br/>
+            <input type="password" name="password" id="password" class="form-login" ><br/>
+            <div id="pass_error">Please fill up your Password</div>
+            <button type="submit" class="press-login" >LOGIN</button>
+            
+        </div>
+    </form>
+    <footer>Powered by HTML, CSS and JS 2020</footer>
+        
+    <script>
+        let user = document.forms['form']['username']
+        let password = document.forms['form']['password']
+        let user_error = document.getElementById('user_error')
+        let pass_error = document.getElementById('pass_error')
+
+        user.addEventListener('textInput', user_verify)
+        password.addEventListener('textInput', pass_verify)
+
+
+        function check() {
+            if (user.value.length < 3) {
+                user_error.style.display = 'block'
+                user.style.border = '0.5px solid red'
+                user.focus()
+                return false
+            }
+
+            if (password.value.length < 8) {
+                pass_error.style.display = 'block'
+                password.style.border = '0.5px solid red'
+                password.focus()
+                return false
+            }
+        }
+
+        function user_verify() {
+            if (user.value.length >= 4) {
+                user_error.style.display = 'none'
+                user.style.border = '0.5px solid silver'
+                return true
+            } 
+        }
+
+        function pass_verify() {
+            if (password.value.length >= 8) {
+                pass_error.style.display = 'none'
+                password.style.border = '0.5px solid silver'
+                return true
+            } 
+        }
+
+    </script>
+</body>
+</html>

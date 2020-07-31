@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: rgb(218, 224, 224);
+}
+
+nav li {
+    display: inline-block;
+    padding: 15px;
+    font-family: 'Acme', sans-serif;
+    font-size: 20px;
+}
+
+nav ul li a {
+    color: teal;
+}
+
+nav a:hover {
+    display: inline-block;
+    color: black;
+}
+
+.menu {
+    text-align: right;
+    margin-right: 50px;
+    font-weight: bold;
+    color: rgb(8, 8, 8);
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: 'Vollkorn', serif;
+    color: white;
+    background-image: url(sky.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.input-div {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+.input {
+    width: 400px;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 11pt;
+    background-color: white;
+    border: black 0.5px solid;
+    border-radius: 30px;
+    outline: none;
+}
+
+.addButton {
+    width: 100px;
+    padding: 10px;
+    background-color: rgb(29, 219, 61);
+    color: white;
+    font-size: 11pt;
+    border: 0.5px solid rgb(7, 7, 7);
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+}
+
+.addButton:hover {
+    opacity: 0.7;
+}
+
+.add-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.item {
+    border-bottom: #fff 3px solid;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+}
+
+.item_input {
+    outline: none;
+    background: none;
+    border: none;
+    width: 600px;
+    font-size: 1.3rem;
+    color: rgb(0, 0, 0);
+}
+
+.editButton {
+    color: lime;
+    padding-right: 10px;
+    outline: none;
+    font-size: 1.3rem;
+    background: none;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+
+.removeButton {
+    color: red;
+    padding-left: 10px;
+    outline: none;
+    font-size: 1.3rem;
+    background: none;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+
+.title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+}
+
+#todo {
+    color: yellow;
+}
